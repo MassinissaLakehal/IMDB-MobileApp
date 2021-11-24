@@ -66,27 +66,53 @@ export default function App() {
       </View>
       <View style={styles.castContainer}>
         <Text style={styles.castTitle}>Top Billed Cast</Text>
-
-        <ScrollView horizon={true} style={styles.actors}>
-          <View style={styles.actorContainer}>
-            <Image
-              source={require("./assets/matthew.jpg")}
-              style={styles.actorImg}
-              resizeMode="contain"
-            />
-            <Text style={styles.white}>Matthew McConaughey</Text>
-            <Text style={styles.notationGrey}>Cooper</Text>
-          </View>
-          <View style={styles.actorContainer}>
-            <Image
-              source={require("./assets/matthew.jpg")}
-              style={styles.actorImg}
-              resizeMode="contain"
-            />
-            <Text style={styles.white}>Matthew McConaughey</Text>
-            <Text style={styles.notationGrey}>Cooper</Text>
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+          <View style={styles.actors}>
+            <View style={styles.actorContainer}>
+              <Image
+                source={require("./assets/matthew.jpg")}
+                style={styles.actorImg}
+                resizeMode="contain"
+              />
+              <Text style={styles.white}>Matthew McConaughey</Text>
+              <Text style={styles.notationGrey}>Cooper</Text>
+            </View>
+            <View style={styles.actorContainer}>
+              <Image
+                source={require("./assets/anne.jpg")}
+                style={styles.actorImg}
+                resizeMode="contain"
+              />
+              <Text style={styles.white}>Anne Hathaway</Text>
+              <Text style={styles.notationGrey}>Brand</Text>
+            </View>
+            <View style={styles.actorContainer}>
+              <Image
+                source={require("./assets/jessica.jpg")}
+                style={styles.actorImg}
+                resizeMode="contain"
+              />
+              <Text style={styles.white}>Jessica Chastain</Text>
+              <Text style={styles.notationGrey}>Murph</Text>
+            </View>
+            <View style={styles.actorContainer}>
+              <Image
+                source={require("./assets/mackenzie.jpg")}
+                style={styles.actorImg}
+                resizeMode="contain"
+              />
+              <Text style={styles.white}>Mackenzie Foy</Text>
+              <Text style={styles.notationGrey}>Murph</Text>
+            </View>
           </View>
         </ScrollView>
+        <Text style={styles.white}>Director</Text>
+        <Text style={styles.notationGrey}>Christophe Nolan</Text>
+
+        <Text style={styles.white}>Writers</Text>
+        <Text style={styles.notationGrey}>
+          Jonathan Nolan (written by) and Christopher Nolan (writter by)
+        </Text>
       </View>
       <StatusBar style="auto" />
     </View>
@@ -108,7 +134,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   logo: {
-    flex: 0.7,
+    // flex: 0.7,
+    width: 80,
+    height: 80,
     //    backgroundColor: "white",
   },
   movieContainer: {
@@ -164,9 +192,9 @@ const styles = StyleSheet.create({
     flex: 4.3,
     paddingHorizontal: 10,
   },
-  actors: { flexDirection: "row" },
-  actorContainer: { backgroundColor: "white" },
-  actorImg: { height: 170 },
+  actors: { flexDirection: "row", justifyContent: "space-between" },
+  actorContainer: { backgroundColor: "#2A2A2A" },
+  actorImg: { height: 170, width: 170 },
   castTitle: { fontSize: 25, color: "white", marginTop: 15, marginBottom: 10 },
   white: { color: "#FFFFFF" },
   grey: { color: "#7C7C7C" },
